@@ -1,38 +1,29 @@
-# Use the Node.js image as the base
-FROM node:18-alpine AS builder
+# Use the Node.js image
+FROM node:18-alpine as builder
+
+# Install pnpm globally
+RUN npm install -g pnpm
 
 # Set the working directory
 WORKDIR /app
 
-# Copy package.json and package-lock.json
-COPY package.json package-lock.json ./
+# Copy package files
+COPY package.json pnpm-lock.yaml ./
 
-# Install dependencies
-RUN npm install
+# Install dependencies using pnpm
+RUN pnpm install
 
 # Copy the rest of the application code
 COPY . .
 
-# Build the Next.js app
-RUN npm run build
+# Build the application
+RUN pnpm build
 
-# Use a smaller image for the production stage
-FROM node:18-alpine AS runner
+# Run the application with a smaller base image
+FROM node:18-alpine
 
-# Set the working directory
 WORKDIR /app
 
-# Copy only necessary files from the builder stage
-COPY --from=builder /app/package.json ./
-COPY --from=builder /app/node_modules ./node_modules
-COPY --from=builder /app/.next ./.next
-COPY --from=builder /app/public ./public
+COPY --from=builder /app .
 
-# Expose the port that the app runs on
-EXPOSE 3000
-
-# Set environment variable for production
-ENV NODE_ENV=production
-
-# Start the Next.js application
-CMD ["npm", "run", "start"]
+CMD ["pnpm", "start"]
