@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { Card } from "@/components/ui/card"
-import { Calendar, MapPin, Clock, Users } from 'lucide-react'
+import { Calendar, MapPin, Clock } from 'lucide-react'
 import { FaFacebook, FaTwitter, FaLinkedin } from 'react-icons/fa'
 
 const events = [
@@ -48,12 +48,12 @@ const events = [
   }
 ]
 
-export function BlockPage() {
+export default function EventsPage() {
   return (
     <>
       <motion.h1
         className="text-5xl font-bold mb-12 text-black"
-        initial={{ y: -50, opacity: 0 }}
+        initial={{ y: 0, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8 }}
       >

@@ -42,11 +42,11 @@ export default function HomePage() {
         </div>
         <div className="bg-orange-300 p-12 min-h-[400px] flex items-center justify-center">
           <Image
-            src="/energy.jpeg"
+            src="/img/energy.jpeg"
             alt="Energy Club IIT Bombay Logo"
             width={400}
             height={400}
-            className="w-auto h-auto"
+            className="w-auto h-auto rounded-full"
           />
         </div>
       </div>
@@ -59,14 +59,14 @@ export default function HomePage() {
             <Plug className="w-16 h-16 mb-6" />
             <h3 className="text-2xl font-bold mb-4">Technology</h3>
             <p className="text-lg">
-              In today's era, Technology has all the possible solutions to our problems. At Energy Club, we are obsessed with cutting edge technology in the energy sector that will shape our future.
+              In today&apos;s era, Technology has all the possible solutions to our problems. At Energy Club, we are obsessed with cutting edge technology in the energy sector that will shape our future.
             </p>
           </Card>
           <Card className="p-8 border-2 border-black rounded-none hover:bg-green-100 transition-colors">
             <Leaf className="w-16 h-16 mb-6" />
             <h3 className="text-2xl font-bold mb-4">Environment</h3>
             <p className="text-lg">
-              Energy can never be separated from its impact on the Environment. Environment is a key component for a sustainable future. With humans pushing nature's carrying capacity to its limits, we are trying to understand the delicate balance of nature and the urgency of climate change.
+              Energy can never be separated from its impact on the Environment. Environment is a key component for a sustainable future. With humans pushing nature&apos;s carrying capacity to its limits, we are trying to understand the delicate balance of nature and the urgency of climate change.
             </p>
           </Card>
           <Card className="p-8 border-2 border-black rounded-none hover:bg-yellow-100 transition-colors">
@@ -106,7 +106,7 @@ export default function HomePage() {
       <div className="bg-yellow-300 p-12 text-center mb-16">
         <h2 className="text-4xl font-bold mb-6 text-black">Ready to Energize the Future?</h2>
         <p className="text-xl mb-8 max-w-2xl mx-auto">
-          Join Energy Club IIT Bombay and be part of India's sustainable energy revolution.
+          Join Energy Club IIT Bombay and be part of India&apos;s sustainable energy revolution.
         </p>
         <Button className="bg-black text-white hover:bg-gray-800 text-lg px-12 py-4 rounded-none">
           Get Started

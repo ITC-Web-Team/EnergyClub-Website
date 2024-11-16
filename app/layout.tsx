@@ -8,6 +8,9 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata = {
   title: 'Energy Club IIT Bombay',
   description: 'Powering the future through innovation and collaboration',
+  icons: {
+    icon: '/img/energy.jpeg',
+  }
 }
 
 export default function RootLayout({
@@ -25,7 +28,7 @@ export default function RootLayout({
               <div className="flex justify-between items-center">
                 <Link href={"/"} className="flex items-center gap-4">
                   <Image
-                    src="/energy.jpeg"
+                    src="/img/energy.jpeg"
                     alt="Energy Club IIT Bombay Logo"
                     width={50}
                     height={50}
@@ -34,14 +37,14 @@ export default function RootLayout({
                   <span className="font-bold text-2xl">ENERGY CLUB IITB</span>
                 </Link>
                 <div className="flex space-x-8">
-                  <Link href="/projects" className="inline-flex items-center px-1 pt-1 text-sm font-medium">
-                    WHAT WE DO
+                  <Link href="/projects" className="inline-flex items-center px-1 pt-1 text-sm font-medium hover:underline">
+                    PROJECTS
                   </Link>
-                  <Link href="/team" className="inline-flex items-center px-1 pt-1 text-sm font-medium">
-                    OUR TEAM
-                  </Link>
-                  <Link href="/events" className="inline-flex items-center px-1 pt-1 text-sm font-medium">
+                  <Link href="/events" className="inline-flex items-center px-1 pt-1 text-sm font-medium hover:underline">
                     EVENTS
+                  </Link>
+                  <Link href="/team" className="inline-flex items-center px-1 pt-1 text-sm font-medium hover:underline">
+                    OUR TEAM
                   </Link>
                 </div>
               </div>

@@ -59,7 +59,7 @@ export default function TeamPage() {
     <>
       <motion.h1
         className="text-5xl font-bold mb-12 text-black"
-        initial={{ y: -50, opacity: 0 }}
+        initial={{ y: 0, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8 }}
       >
