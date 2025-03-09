@@ -5,6 +5,6 @@ from energy_club_backend import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('', views.get_events, name='get_events'),
+    path('get_all_events/', views.get_events, name='get_events'),
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
 
